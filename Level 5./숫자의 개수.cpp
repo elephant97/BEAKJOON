@@ -2,7 +2,7 @@
 using namespace std;
 
 int main()
-{
+{ 
 	int arr[3] = { 0, };
 	int return_arr[10] = { 0, };
 	int cal = 0; int num = 0; int x = 10;
