@@ -2,31 +2,37 @@
 using namespace std;
 
 int main()
-{ 
-	int arr[3] = { 0, };
-	int return_arr[10] = { 0, };
-	int cal = 0; int num = 0; int x = 10;
+{
+	double *arr = NULL;
+	int count = 0; double average = 0.00;
+	double max = 0; int i = 0;
 
-	for (int i = 0; i < 3; i++)
+	cin >> count;
+	
+	arr = new double[count];
+
+	for (i = 0; i < count; i++)
 	{
 		cin >> arr[i];
 		if (i == 0)
 		{
-			cal = arr[i];
-			continue;
+			max = arr[i];
 		}
-		cal *= arr[i];
+		
+		max = arr[i] > max ? arr[i] : max;	
 	}
 
-	while (cal != 0)
+	for (i = 0; i < count; i++)
 	{
-		num = cal % x;
-		cal /= x;
-		return_arr[num]++;
+		arr[i] = arr[i] / max * 100.0;
 	}
 
-	for (int i = 0; i < 10; i++)
+	average = arr[0];
+	for (i = 1; i < count; i++)
 	{
-		cout << return_arr[i] <<"\n";
+		average += arr[i];
 	}
+
+	cout << average / (double)count;
+	delete []arr;
 }
