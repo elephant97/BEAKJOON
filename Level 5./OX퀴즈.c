@@ -3,29 +3,35 @@
 
 int main()
 {
-    int cnt = 0, i =0, x = 0;
-    char *str = NULL;
-    char *OX_arr = NULL;
-    char *answer = NULL;
-    
-    scanf("%d",cnt);
-    answer = (char *)malloc(sizeof(char) * cnt);
-    memset(answer, 0x00, sizeof(char) * cnt);
+    int cnt = 0, i = 0, x = 0, o_cnt = 0;
+    char OX_arr[80] = { 0, };
+    int* answer = NULL;
 
-    for(i=0; i<cnt; i++)
+    scanf("%d", &cnt);
+    answer = (int*)malloc(sizeof(int) * cnt);
+    memset(answer, 0, sizeof(int) * cnt);
+
+    for (i = 0; i < cnt; i++)
     {
-        scanf("%s",str);
-        OX_arr = (char *)malloc(sizeof(char) * strlen(str)+1);
-        memset(OX_arr, 0x00, sizeof(char) * strlen(str)+1);
-        sprintf(OX_arr,"%s",str);
-        for(x = 0; x < strlen(OX_arr); x++)
+        o_cnt = 0;
+        memset(OX_arr, 0x00, 80);
+        scanf("%s", OX_arr);
+        for (x = 0; x < strlen(OX_arr); x++)
         {
-            if(OX_arr[x] == 'O')
+            if (OX_arr[x] == 'O')
             {
-                
+                o_cnt++;
+                answer[i] += o_cnt;
+            }
+            else
+            {
+                o_cnt = 0;
             }
         }
-
     }
 
+    for (i = 0; i < cnt; i++)
+    {
+        printf("%d\n", answer[i]);
+    }
 }
