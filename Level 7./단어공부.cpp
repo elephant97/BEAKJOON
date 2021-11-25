@@ -36,5 +36,6 @@ int main() {
         cout << (char)(max_index+'A');
     else
        cout << "?\n";
+    
 }
 
