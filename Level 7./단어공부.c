@@ -32,5 +32,6 @@ int main() {
         printf("%c", (char)max_index+'A');
     else
         printf("?\n");
+    
 }
 
