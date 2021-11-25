@@ -30,5 +30,4 @@ int main()
 		printf("%s\n", repeat_str);
 		free(repeat_str);
 	}
-
 }
