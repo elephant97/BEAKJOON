@@ -14,5 +14,4 @@ int main()
 
 
 	printf("%llu" ,A/(C-B)+1);
-
 }
