@@ -13,13 +13,7 @@ int main()
 		return 0;
 	}
 
-	while (A + variable_cost > sales_cost)
-	{
-		variable_cost += B;
-		sales_cost += C;	
-		i++;
-	}
 
-	cout << i;
+	cout << A/(C-B)+1;
 
 }
