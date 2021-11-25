@@ -39,4 +39,5 @@ int main()
 		cout<< a;
 	else
 		cout << b;
+	
 }
