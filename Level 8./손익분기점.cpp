@@ -15,5 +15,4 @@ int main()
 
 
 	cout << A/(C-B)+1;
-
 }
