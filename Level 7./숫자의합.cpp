@@ -15,6 +15,5 @@ int main()
 	{
 		sum += str[i] - '0';
 	}
-
 	cout << sum;
 }
