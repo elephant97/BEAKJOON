@@ -5,6 +5,5 @@ int main()
 {
 	char a;
 	cin >> a;
-
 	cout << (int)a;
 }
