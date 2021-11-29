@@ -28,6 +28,5 @@ int main()
 		else if (str.at(i) >= 'W' && str.at(i) <= 'Z')
 			result += 10;
 	}
-
 	cout << result;
 }
