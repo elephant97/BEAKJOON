@@ -27,6 +27,5 @@ int main()
 		else if (str[i] >= 'W' && str[i] <= 'Z')
 			result += 10;
 	}
-
 	printf("%d",result);
 }
