@@ -8,18 +8,19 @@ int main()
 	cin >> gram;
 
 
-	if ((temp = gram/5) > 0)
+	if ((temp = gram / 5) > 0)
 	{
 		while (temp >= 0)
 		{
 			if ((gram - (temp * 5)) % 3 == 0)
 			{
 				sugar = temp + (gram - (temp * 5)) / 3;
+				cout << sugar << "\n";
 				break;
 			}
 			temp--;
 		}
-		if (temp == 0) sugar = -1;
+		if (temp < 0) sugar = -1;
 	}
 	else if (gram % 3 == 0)
 	{
@@ -29,8 +30,8 @@ int main()
 	{
 		sugar = -1;
 	}
-		
-	
+
+
 
 	cout << sugar;
 	return 0;
