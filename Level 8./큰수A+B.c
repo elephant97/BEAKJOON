@@ -12,7 +12,6 @@ int main()
 
     a_length = strlen(a) - 1;
     b_length = strlen(b) - 1;
-    range = (a_length >= b_length) ? a_length : b_length;
 
     if (a_length >= b_length)
     {
